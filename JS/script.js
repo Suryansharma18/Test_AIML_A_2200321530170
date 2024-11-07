@@ -1,11 +1,11 @@
-// Login validation
+
 function login() {
     const userid = document.getElementById("userid").value;
     const password = document.getElementById("password").value;
 
     if (userid === "admin" && password === "admin") {
-        // Redirect to the currency converter page on successful login
-        window.location.href = "converter.html";
+        
+        window.location.href = "Currency_converter.html";
     } else {
         alert("Error: Incorrect User ID or Password.");
     }
@@ -16,7 +16,7 @@ function resetForm() {
     document.getElementById("password").value = "";
 }
 
-// Currency conversion
+
 async function convertCurrency() {
     const amount = document.getElementById("amount").value;
     const fromCurrency = document.getElementById("fromCurrency").value;
@@ -28,7 +28,7 @@ async function convertCurrency() {
     }
 
     try {
-        // Fetch exchange rate from a currency conversion API
+       
         const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`);
         const data = await response.json();
 
